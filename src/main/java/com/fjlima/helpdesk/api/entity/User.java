@@ -33,6 +33,15 @@ public class User implements Serializable {
 		// TODO Auto-generated constructor stub
 	}
 
+	public User(String id, @NotBlank(message = "Email required") @Email(message = "Email inválido") String email,
+			@NotBlank(message = "Password required") @Size(min = 6) String password, ProfileEnum profile) {
+		super();
+		this.id = id;
+		this.email = email;
+		this.password = password;
+		this.profile = profile;
+	}
+
 	public String getId() {
 		return id;
 	}
