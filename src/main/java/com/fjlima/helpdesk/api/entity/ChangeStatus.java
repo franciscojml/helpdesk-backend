@@ -19,9 +19,9 @@ public class ChangeStatus implements Serializable {
 	private Ticket ticket;
 
 	@DBRef
-	private User userChanges;
+	private User userChange;
 
-	private Date dateChange;
+	private Date dateChangeStatus;
 
 	private StatusEnum status;
 
@@ -29,12 +29,12 @@ public class ChangeStatus implements Serializable {
 		// TODO Auto-generated constructor stub
 	}
 
-	public ChangeStatus(String id, Ticket ticket, User userChanges, Date dateChange, StatusEnum status) {
+	public ChangeStatus(String id, Ticket ticket, User userChange, Date dateChangeStatus, StatusEnum status) {
 		super();
 		this.id = id;
 		this.ticket = ticket;
-		this.userChanges = userChanges;
-		this.dateChange = dateChange;
+		this.userChange = userChange;
+		this.dateChangeStatus = dateChangeStatus;
 		this.status = status;
 	}
 
@@ -54,20 +54,20 @@ public class ChangeStatus implements Serializable {
 		this.ticket = ticket;
 	}
 
-	public User getUserChanges() {
-		return userChanges;
+	public User getUserChange() {
+		return userChange;
 	}
 
-	public void setUserChanges(User userChanges) {
-		this.userChanges = userChanges;
+	public void setUserChange(User userChange) {
+		this.userChange = userChange;
 	}
 
-	public Date getDateChange() {
-		return dateChange;
+	public Date getDateChangeStatus() {
+		return dateChangeStatus;
 	}
 
-	public void setDateChange(Date dateChange) {
-		this.dateChange = dateChange;
+	public void setDateChangeStatus(Date dateChangeStatus) {
+		this.dateChangeStatus = dateChangeStatus;
 	}
 
 	public StatusEnum getStatus() {
@@ -77,4 +77,5 @@ public class ChangeStatus implements Serializable {
 	public void setStatus(StatusEnum status) {
 		this.status = status;
 	}
+
 }

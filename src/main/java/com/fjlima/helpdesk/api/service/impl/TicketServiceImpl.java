@@ -55,7 +55,7 @@ public class TicketServiceImpl implements TicketService {
 	}
 
 	public Iterable<ChangeStatus> listChangeStatus(String ticketId) {
-		return this.changeStatusRepository.findByTicketIdOrderByDateChangeDesc(ticketId);
+		return this.changeStatusRepository.findByTicketIdOrderByDateChangeStatusDesc(ticketId);
 	}
 
 	public Page<Ticket> findByParameters(int page, int count, String title, String status, String priority) {

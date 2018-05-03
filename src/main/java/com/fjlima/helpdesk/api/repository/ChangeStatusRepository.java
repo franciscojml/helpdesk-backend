@@ -6,6 +6,6 @@ import com.fjlima.helpdesk.api.entity.ChangeStatus;
 
 public interface ChangeStatusRepository extends MongoRepository<ChangeStatus, String> {
 
-	Iterable<ChangeStatus> findByTicketIdOrderByDateChangeDesc(String ticketId);
+	Iterable<ChangeStatus> findByTicketIdOrderByDateChangeStatusDesc(String ticketId);
 
 }
